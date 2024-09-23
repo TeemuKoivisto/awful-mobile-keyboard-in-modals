@@ -28,11 +28,15 @@
   <div class="px-4 mb-8 md:mb-10">
     <button
       class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
-      on:click={() => modalActions.open('introduction', undefined)}>Modal</button
+      on:click={() => modalActions.open('v1', undefined)}>Modal v1</button
     >
     <button
       class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
-      on:click={() => modalActions.open('modal2', undefined)}>Modal2</button
+      on:click={() => modalActions.open('flowbite', undefined)}>Flowbite</button
+    >
+    <button
+      class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
+      on:click={() => modalActions.open('v2', undefined)}>Modal v2</button
     >
     <button class="dialog-btn" on:click={handleClick}>Dialog</button>
   </div>

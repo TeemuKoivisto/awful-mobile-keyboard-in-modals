@@ -1,13 +1,15 @@
 import { get, writable } from 'svelte/store'
 
 export interface ModalParams {
-  introduction: undefined
-  modal2: undefined
+  v1: undefined
+  v2: undefined
+  flowbite: undefined
 }
 
 const defaultParams = {
-  introduction: undefined,
-  modal2: undefined
+  v1: undefined,
+  v2: undefined,
+  flowbite: undefined
 }
 
 export const modals = writable<ModalParams>(defaultParams)

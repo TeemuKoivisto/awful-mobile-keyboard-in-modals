@@ -146,4 +146,8 @@
   </div>
 </div>
 
-<style lang="postcss"></style>
+<style lang="postcss">
+  .h-modal {
+    height: calc(100% - 2rem);
+  }
+</style>

@@ -5,7 +5,7 @@
   import type { ModalParams } from '$stores/modal'
   import { onMount } from 'svelte'
 
-  export let params: ModalParams['introduction']
+  export let params: ModalParams['v1']
   export let hideModal: () => void = () => undefined
 
   let originalFocusedEl: HTMLElement
