@@ -29,6 +29,8 @@
     "@iconify-icons/mdi": "^1.2.48",
     "@iconify/svelte": "^4.0.2",
     "autoprefixer": "^10.4.19",
+    "flowbite": "^2.5.1",
+    "flowbite-svelte": "^0.46.17",
     "tailwindcss": "^3.4.3"
   }
 }

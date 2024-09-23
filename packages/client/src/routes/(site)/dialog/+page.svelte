@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Scroller from '$components/Scroller.svelte'
   import { modalActions } from '$stores/modal'
 
   let modalEl: HTMLDialogElement
@@ -27,23 +26,20 @@
   <div class="px-4 mb-8 md:mb-10">
     <button
       class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
-      on:click={() => modalActions.open('introduction', undefined)}>Modal</button
+      on:click={() => handleClick()}>Modal</button
     >
-    <button class="dialog-btn" on:click={handleClick}>Dialog</button>
   </div>
 </section>
-
-<Scroller />
 
 <dialog class="modal" bind:this={modalEl}>
   <p>Udohgram</p>
   <p>Insert pretty picture</p>
-  <button class="dialog-btn" on:click={handleClick}>Close modal</button>
+  <button class="close-button">Close modal</button>
   <p>Sorry, you can't login. You can't contact support either.</p>
 </dialog>
 
 <style lang="postcss">
-  .dialog-btn {
+  button {
     display: block;
     margin: 40px auto;
     border: 0;
@@ -57,10 +53,10 @@
     color: #fff;
     transition: all 240ms linear;
   }
-  .dialog-btn:hover {
+  button:hover {
     filter: brightness(0.8);
   }
-  .dialog-btn:active {
+  button:active {
     transform: scale(0.9);
   }
   dialog {
