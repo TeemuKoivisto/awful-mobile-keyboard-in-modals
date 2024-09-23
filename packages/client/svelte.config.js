@@ -30,13 +30,13 @@ export default {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: '404.html',
+      fallback: '404.html'
     }),
     alias: {
       $components: 'src/components',
       $config: 'src/config',
-      $elements: 'src/elements',
-      $lib: 'src/lib'
+      $modals: 'src/modals',
+      $stores: 'src/stores'
     }
   }
 }

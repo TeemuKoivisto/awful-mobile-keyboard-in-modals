@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { modalActions } from '$stores/modal'
 </script>
 
 <header>
@@ -10,6 +11,12 @@
 </header>
 
 <section class="px-4 flex flex-col">
+  <div class="px-4 mb-8 md:mb-10">
+    <button
+      class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
+      on:click={() => modalActions.open('introduction', undefined)}>Modal</button
+    >
+  </div>
 </section>
 
 <style lang="postcss">
