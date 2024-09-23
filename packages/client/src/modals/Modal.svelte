@@ -1,11 +1,13 @@
 <script lang="ts">
   import { fade, scale } from 'svelte/transition'
   import Introduction from '$modals/Introduction.svelte'
+  import Modal2 from '$components/Modal2.svelte'
 
   import { modalActions, openModal, modals } from '$stores/modal'
 
   const components = {
-    introduction: Introduction
+    introduction: Introduction,
+    modal2: Modal2
   }
 
   const MODAL_DURATION = 400
@@ -23,18 +25,15 @@
       on:click={handleOverlayClick}
       tabindex="-1"
     />
-
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 bg-gray-100 w-11/12 mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
+      class="absolute top-4 bottom-0 mb-4 z-50 bg-gray-100 mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
     >
-      <div class="relative flex flex-col p-6 text-left bg-gray-100">
-        <svelte:component
-          this={components[$openModal]}
-          params={$modals[$openModal]}
-          hideModal={handleOverlayClick}
-        />
-      </div>
+      <svelte:component
+        this={components[$openModal]}
+        params={$modals[$openModal]}
+        hideModal={handleOverlayClick}
+      />
     </div>
   </div>
 {/if}

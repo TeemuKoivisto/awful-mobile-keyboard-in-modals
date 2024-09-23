@@ -1,5 +1,6 @@
 <script lang="ts">
   import Scroller from '$components/Scroller.svelte'
+
   import { modalActions } from '$stores/modal'
 
   let modalEl: HTMLDialogElement
@@ -28,6 +29,10 @@
     <button
       class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
       on:click={() => modalActions.open('introduction', undefined)}>Modal</button
+    >
+    <button
+      class="btn-pill border-2 border-gray-300 hover:bg-gray-200"
+      on:click={() => modalActions.open('modal2', undefined)}>Modal2</button
     >
     <button class="dialog-btn" on:click={handleClick}>Dialog</button>
   </div>

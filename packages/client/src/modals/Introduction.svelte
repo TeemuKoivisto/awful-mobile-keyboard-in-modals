@@ -34,8 +34,8 @@
 
 <svelte:window on:keydown={handleKeyDown} />
 
-<div bind:this={closeButtonEl} tabindex="-1" class="flex flex-col relative focus:outline-none">
-  <div class="absolute -top-2 -right-2">
+<div bind:this={closeButtonEl} tabindex="-1" class="p-4 flex flex-col relative focus:outline-none">
+  <div class="absolute top-2 right-2">
     <button
       class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
       on:click={hideModal}
