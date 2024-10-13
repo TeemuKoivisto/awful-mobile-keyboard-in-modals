@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, interactive-widget=resizes-content"
+    />
+    <title>sveltekit</title>
+
+    <script>
+      try {
+        if (!('theme' in localStorage)) {
+          localStorage.theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+        }
+
+        document.querySelector('html').classList.add(localStorage.theme)
+      } catch (e) {
+        console.error(e)
+      }
+    </script>
+
+    <link rel="icon" href="/favicon.png" />
+
+    
+		<link href="./_app/immutable/assets/0.iE5DAjUr.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.CIuNnLdN.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BOmDcw0C.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.Boe9MUhj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.DSOxBxra.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.i_Vh1jAN.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CFcJYCoo.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.DKNCN1Hp.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.iVZmDqGT.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.Cgvv7WKk.js">
+  </head>
+
+  <body>
+    <div id="svelte">  <div class="flex-col items-center justify-center"><main class="px-4 flex flex-col items-center h-full min-h-[100vh] max-w-[860px] mx-auto"><header data-svelte-h="svelte-1207jjr"><h1 class="mt-12 mb-4 md:mt-16 text-4xl font-bold">Modals are hard</h1> <div class="pl-2 text-base"><p>An optimal modal should:</p> <ol class="pl-8 list-decimal"><li>Fit the viewport without scrolling the modal itself, only content</li> <li>Adjust height dynamically in mobile when keyboard is open, without overflowing</li> <li>Have clickable overlay background that closes the modal</li> <li>Have overlay work on the empty space above &amp; under modal as well</li></ol> <p class="mt-2">I&#39;ve put here some examples to showcase the different ways of doing it.</p> <ul class="pl-8 list-disc"><li>Flowbite has a pretty good scrolling modal</li> <li>melt-ui&#39;s example is no good</li> <li>Native dialog is too difficult to work with</li> <li>V1 doesn&#39;t scroll content</li> <li>V2 doesn&#39;t close on overlay clicks above/under</li> <li>V3 is the best way I&#39;ve found so far. No clickable backdrop though</li></ul></div></header> <section class="mt-8 gap-4 flex flex-col"><div class="flex flex-wrap gap-2 items-end"> <div class="flex flex-col"><a class="hover:underline" href="https://flowbite-svelte.com/docs/components/modal#Scrolling_behaviour" data-svelte-h="svelte-1yn5137">Source</a> <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" data-svelte-h="svelte-1jqgz8k">Flowbite</button></div>  <div class="flex flex-col"><a class="hover:underline" href="https://melt-ui.com/docs/builders/dialog" data-svelte-h="svelte-17nf7mv">Source</a> <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" aria-haspopup="dialog" aria-expanded="false" type="button" data-melt-dialog-trigger="">melt-ui</button></div>  <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" data-svelte-h="svelte-1lddne1">Dialog</button>   <dialog class="relative max-w-2xl w-full max-h-[580px] bg-white rounded-xl shadow-lg open:animate-fade-in open:backdrop:animate-fade-in backdrop:bg-black backdrop:bg-opacity-50"><div class="p-4"><h2 class="my-2 text-4xl sm:text-5xl font-semibold text-black flex items-center justify-between"><span data-svelte-h="svelte-1pctbur">Modal</span> <button class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="24" height="24" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/><!-- HTML_TAG_END --></svg></button></h2> <article class=" w-full space-y-4 flex-1 overflow-y-auto overscroll-contain svelte-1u12pf0"><p class="svelte-1u12pf0" data-svelte-h="svelte-7807wr">This is very tall modal content that be scrollable and also adjust to the open mobile keyboard
+    when its input is focused.</p> <input> <p class="svelte-1u12pf0" data-svelte-h="svelte-123cn9p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus at erat quis consectetur.
+    Suspendisse quis dolor non urna congue pharetra lacinia ut nulla. Curabitur ut iaculis magna,
+    rhoncus accumsan turpis. Proin non consectetur mauris. Nullam efficitur dui vel magna convallis,
+    id ultricies urna faucibus. Nullam turpis orci, sollicitudin in tortor a, euismod maximus magna.
+    Quisque tristique, dolor cursus dignissim tristique, tellus turpis dignissim arcu, non dignissim
+    ligula eros ac nulla. Morbi sed tortor et eros tristique vehicula. Suspendisse turpis augue,
+    laoreet nec augue scelerisque, dignissim pulvinar dolor.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-n008ei">In pretium tristique ornare. Pellentesque sed felis sit amet neque condimentum finibus. Nunc
+    consectetur ultrices eros at pellentesque. Vestibulum posuere velit metus, at gravida justo
+    mattis ac. Aliquam orci erat, dapibus eu cursus eu, placerat in nulla. Praesent feugiat lectus
+    ornare porttitor eleifend. Aliquam cursus sem a leo venenatis, et ultrices nisl egestas. Nunc
+    pulvinar pharetra elit, id interdum libero vestibulum eu.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-kvpaha">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac
+    nibh quis turpis vulputate pretium non vel magna. Praesent venenatis sodales sodales.
+    Pellentesque luctus lacinia aliquam. Donec odio nunc, consectetur ac turpis non, egestas luctus
+    lectus. Nam risus felis, sodales eget neque id, consectetur maximus mauris. Nullam pellentesque
+    felis ac pellentesque suscipit. Suspendisse malesuada tortor nunc, id sodales ex molestie eu.
+    Donec vel laoreet risus. Aliquam vitae dolor eu velit bibendum porta ut posuere nisl.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-1pr5yjb">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras
+    molestie ipsum in ipsum molestie, eu pellentesque tellus sagittis. Vestibulum pellentesque
+    turpis in neque placerat, ac porta erat euismod. Sed porttitor, turpis in ornare congue, enim
+    turpis consectetur metus, vel aliquet eros nibh nec mi. Nam hendrerit eget dolor at bibendum.
+    Vestibulum eu quam mi. Suspendisse eu tempus metus. Pellentesque vitae turpis tincidunt,
+    interdum ligula at, rutrum lorem. Sed eros leo, hendrerit vitae pretium a, sodales a orci. Donec
+    accumsan sapien eu consequat condimentum. Morbi odio lorem, faucibus at quam non, facilisis
+    consequat magna.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-19h8q1y">Praesent mauris tortor, faucibus vitae purus vel, ultricies congue odio. Morbi mattis quam sit
+    amet bibendum dignissim. Quisque a sagittis nunc. Pellentesque aliquet neque tellus, sed
+    sagittis libero sodales venenatis. Suspendisse iaculis vitae libero molestie volutpat. Integer
+    ut pellentesque magna, non aliquet lacus. Curabitur laoreet dapibus tellus, et lacinia nibh
+    porta sit amet. Suspendisse in purus ante. Nunc commodo laoreet tincidunt. Nullam justo nibh,
+    luctus et ullamcorper id, venenatis ut sapien. Phasellus maximus condimentum urna, ac cursus
+    sapien convallis posuere.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-di6ipn">Nam fermentum est est, eu congue ligula pulvinar fringilla. Morbi dignissim, neque nec finibus
+    dapibus, nisi libero sollicitudin nisi, vel porta ligula lacus eu metus. Interdum et malesuada
+    fames ac ante ipsum primis in faucibus. Aenean fermentum felis augue, et vulputate eros suscipit
+    eget. Pellentesque rutrum bibendum libero. Nam eget felis bibendum, molestie nisi nec, interdum
+    turpis. In viverra ipsum et risus vehicula fermentum. Suspendisse pharetra odio id mattis
+    imperdiet. Proin vel orci scelerisque, suscipit neque at, fringilla tellus. Aenean tempor turpis
+    auctor, tristique orci vel, rhoncus nunc. Ut consequat faucibus finibus. Donec mi tellus,
+    euismod et eros non, consequat convallis purus. Proin lobortis massa nec mi facilisis luctus.
+    Maecenas mattis libero vel nisi lacinia congue nec vel eros. Fusce at sollicitudin turpis.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-1iy233">Nullam dictum quis dolor eget vestibulum. Donec porttitor elit at dui tincidunt, quis dapibus ex
+    pellentesque. Sed scelerisque neque vitae dui bibendum vestibulum. Praesent eu erat odio.
+    Integer blandit volutpat enim, non rutrum tortor interdum eget. Praesent auctor congue enim
+    facilisis maximus. Suspendisse placerat urna in posuere venenatis. Phasellus sem justo,
+    ullamcorper eu iaculis vehicula, rhoncus a ipsum. Nullam vestibulum tempor hendrerit. Aenean
+    vitae faucibus mauris.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-bbx56o">Ut commodo ex ac eros fermentum pretium sed ac odio. Ut tortor mi, vulputate et elit vitae,
+    blandit volutpat neque. Etiam erat lacus, lacinia vitae ipsum in, auctor consequat neque. Aenean
+    non nisi nec nunc euismod dignissim. Proin non gravida magna, ut pulvinar dui. Nam nec metus in
+    lacus pulvinar tincidunt eget ac est. Donec et sem vel ex feugiat consectetur eget in justo.
+    Morbi porta ipsum et erat efficitur pellentesque.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-1gebh73">Integer dolor massa, maximus sed luctus id, ullamcorper ac lorem. In purus sem, maximus nec
+    rhoncus vel, fermentum non mauris. Vestibulum euismod sapien leo, non consequat justo suscipit
+    at. Pellentesque in dolor elit. Nullam eget bibendum nibh. In at quam ullamcorper, pharetra arcu
+    id, cursus dui. Curabitur ante risus, vestibulum sit amet ultricies eget, malesuada at ante.
+    Vivamus vestibulum interdum commodo. Pellentesque fringilla quis tortor non porttitor. Proin
+    facilisis diam diam, sit amet convallis eros rutrum at. Aenean pretium mauris nec augue faucibus
+    dictum. Maecenas nec accumsan massa, id bibendum arcu.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-8rbexg">Duis efficitur metus eu ultrices ullamcorper. In massa massa, porttitor sed congue vel, bibendum
+    tincidunt urna. Curabitur in iaculis sapien. Nunc dapibus venenatis enim non feugiat. Donec
+    mattis, elit fringilla molestie venenatis, nibh odio pretium elit, quis dignissim ligula lacus
+    at erat. Nam viverra cursus orci, a suscipit nisl aliquam et. Donec vel nisl sem. Vestibulum
+    laoreet semper mauris, in efficitur purus dictum sit amet. Donec sed malesuada enim. Vivamus sit
+    amet vehicula nisl, sed vulputate enim. Nunc in augue mi. Nam tellus risus, venenatis a maximus
+    eu, gravida ornare tortor. Integer lacus arcu, scelerisque id luctus et, fermentum et tellus.
+    Donec malesuada orci lectus, eget blandit lectus fringilla nec. Sed id euismod ex.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-1fc7j0v">Maecenas in mattis felis. Donec sed libero sed lectus mattis bibendum sit amet non lorem.
+    Phasellus sit amet pellentesque justo. Nulla molestie enim at cursus auctor. In magna ipsum,
+    egestas non ultricies ac, porta vitae diam. Integer non mauris id ex sodales maximus at ac est.
+    Vivamus dignissim augue quis risus lobortis, vel rhoncus felis maximus. Cras vel lectus eu velit
+    ullamcorper venenatis nec eget augue. Vestibulum vitae augue fringilla, rutrum lorem at,
+    tincidunt nisl. Etiam feugiat posuere arcu.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-169os46">Integer pharetra dui id odio varius porttitor. Cras rutrum, massa eu interdum rutrum, libero
+    turpis congue nibh, ac lacinia ipsum arcu id ligula. Curabitur vel turpis et neque faucibus
+    aliquam sit amet sit amet nunc. Aliquam non dictum magna. Maecenas nunc nibh, egestas et
+    interdum non, consequat sit amet ante. Etiam dapibus non libero fringilla tempus. Cras in
+    fringilla dui. Mauris et pellentesque ipsum. Curabitur ac nulla vitae elit posuere eleifend.
+    Morbi eget nunc id diam malesuada commodo. Morbi purus libero, convallis eu ante quis, posuere
+    molestie felis. Aliquam posuere erat a vestibulum bibendum. Praesent pulvinar dui eros, ac
+    dapibus dolor cursus a. Mauris ac urna consequat, iaculis nibh rhoncus, commodo nunc. Nam a mi
+    vehicula, rhoncus odio sed, feugiat ante. Fusce ex purus, tincidunt ac facilisis eget, tincidunt
+    quis magna.</p> <p class="svelte-1u12pf0" data-svelte-h="svelte-eecpl0">Mauris pulvinar convallis felis, a cursus neque aliquam sit amet. Cras lorem nibh, ullamcorper
+    at fermentum ac, lobortis quis libero. Morbi mattis et nibh ac gravida. Quisque at tellus ex.
+    Etiam non elit molestie nisi convallis scelerisque. Sed ac consequat lorem, in tincidunt mi.
+    Duis a varius dolor, id iaculis purus. Nunc felis purus, auctor sollicitudin ligula sit amet,
+    blandit dapibus arcu. Nam finibus id nulla mattis fermentum.</p> <input> </article> <div class=" text-gray-500 border-gray-200 divide-gray-200 flex items-center space-x-3 rtl:space-x-reverse rounded-b-lg"><button type="button" class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-within:ring-primary-300 dark:focus-within:ring-primary-800 rounded-lg" data-svelte-h="svelte-1pvzchg">I accept</button> <button type="button" class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 dark:text-gray-400 hover:text-primary-700 focus-within:text-primary-700 dark:focus-within:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:bg-transparent dark:border-gray-600 dark:hover:border-gray-600 focus-within:ring-gray-200 dark:focus-within:ring-gray-700 rounded-lg" data-svelte-h="svelte-1bn70vj">Decline</button></div></div> </dialog>  <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" data-svelte-h="svelte-k4z91j">V1</button>   <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" data-svelte-h="svelte-1fiku2a">V2</button>   <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" data-svelte-h="svelte-vse5wp">V3</button> </div> <div><button type="button" autoclose class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-within:ring-primary-300 dark:focus-within:ring-primary-800 rounded-lg">Flowbite Example</button>   </div> </section></main></div> 
+			
+			<script>
+				{
+					__sveltekit_1hnoahl = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.BOmDcw0C.js"),
+						import("./_app/immutable/entry/app.CFcJYCoo.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
