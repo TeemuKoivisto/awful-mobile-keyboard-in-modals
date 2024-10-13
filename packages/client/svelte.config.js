@@ -25,6 +25,9 @@ export default {
   ]),
 
   kit: {
+    paths: {
+      base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+    },
     files: {
       routes: './src/routes',
       lib: './src/lib'

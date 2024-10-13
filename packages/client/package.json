@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "install": "svelte-kit sync || true",
-    "build": "vite build",
+    "build": "BASE_PATH=/awful-mobile-keyboard-in-modals vite build --base=/awful-mobile-keyboard-in-modals",
     "dev": "vite",
     "preview": "vite preview",
     "svelte-check": "svelte-check"
