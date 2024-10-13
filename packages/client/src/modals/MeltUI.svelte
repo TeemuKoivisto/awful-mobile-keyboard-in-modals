@@ -15,7 +15,7 @@
 <div class="flex flex-col">
   <a class="hover:underline" href="https://melt-ui.com/docs/builders/dialog">Source</a>
   <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" use:melt={$trigger}>
-    MeltUI
+    melt-ui
   </button>
 </div>
 
