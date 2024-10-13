@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static'
 import preprocess from 'svelte-preprocess'
+import { preprocessMeltUI, sequence } from '@melt-ui/pp'
 
 import { resolve } from 'path'
 
@@ -11,7 +12,7 @@ import tailwindcss from 'tailwindcss'
 export default {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: [
+  preprocess: sequence([
     preprocess({
       postcss: {
         // @TODO you are not supposed to need both configFilePath & plugins but the intellisense doesn't
@@ -19,8 +20,9 @@ export default {
         configFilePath: resolve('postcss.config.js'),
         plugins: [tailwindcss, autoprefixer, nested]
       }
-    })
-  ],
+    }),
+    preprocessMeltUI()
+  ]),
 
   kit: {
     files: {

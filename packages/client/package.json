@@ -11,6 +11,7 @@
     "svelte-check": "svelte-check"
   },
   "devDependencies": {
+    "@melt-ui/pp": "^0.3.2",
     "@sveltejs/adapter-static": "^3.0.5",
     "@sveltejs/kit": "^2.5.10",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
@@ -28,6 +29,7 @@
     "@iconify-icons/feather": "^1.2.3",
     "@iconify-icons/mdi": "^1.2.48",
     "@iconify/svelte": "^4.0.2",
+    "@melt-ui/svelte": "^0.83.0",
     "autoprefixer": "^10.4.19",
     "flowbite": "^2.5.1",
     "flowbite-svelte": "^0.46.17",
