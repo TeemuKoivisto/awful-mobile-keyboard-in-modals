@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Content from '$components/Content.svelte'
+
   let modalEl: HTMLDialogElement
   let open = false
 
@@ -15,10 +17,9 @@
 <button class="dialog-btn" on:click={handleClick}>Dialog</button>
 
 <dialog class="modal" bind:this={modalEl}>
-  <p>Udohgram</p>
-  <p>Insert pretty picture</p>
+  <h2 class="pl-1.5 mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Native Modal</h2>
+  <Content />
   <button class="dialog-btn" on:click={handleClick}>Close modal</button>
-  <p>Sorry, you can't login. You can't contact support either.</p>
 </dialog>
 
 <style lang="postcss">
@@ -49,17 +50,5 @@
     padding: 34px;
     border: 0;
     border-radius: 5px;
-  }
-  dialog > p {
-    text-align: center;
-    margin: 0;
-  }
-  dialog > p:first-of-type {
-    margin: 0 auto 20px;
-    font-size: 32px;
-    font-weight: 600;
-  }
-  dialog > button {
-    margin: 20px auto;
   }
 </style>

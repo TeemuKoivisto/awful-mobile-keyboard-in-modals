@@ -1,23 +1,39 @@
 <script lang="ts">
   import { fade, scale } from 'svelte/transition'
 
+  import Content from '$components/Content.svelte'
+
   const MODAL_DURATION = 400
   let open = false
+  let originalFocusedEl: HTMLElement
+  let closeButtonEl: HTMLElement
 
   function handleKeyDown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
       close()
     }
   }
-
+  function openModal() {
+    open = true
+    if (document.activeElement instanceof HTMLElement) {
+      originalFocusedEl = document.activeElement
+    }
+    closeButtonEl.focus()
+    // Lock scrolling of viewport behind the modal
+    document.querySelector('html')?.classList.add('scroll-lock')
+  }
   function close() {
     open = false
+    originalFocusedEl.focus()
+    document.querySelector('html')?.classList.remove('scroll-lock')
   }
 </script>
 
 <svelte:window on:keydown={handleKeyDown} />
 
-<button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" on:click={close}> Flowbite </button>
+<button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" on:click={openModal}>
+  Flowbite Clone
+</button>
 
 {#if open}
   <div
