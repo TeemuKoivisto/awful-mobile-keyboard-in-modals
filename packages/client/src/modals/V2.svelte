@@ -38,7 +38,7 @@
 
 {#if open}
   <div
-    class="fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center"
+    class="fixed top-0 start-0 end-0 md:inset-0 h-full z-50 w-full flex justify-center items-center"
     aria-modal="true"
     role="dialog"
   >
@@ -72,7 +72,4 @@
 {/if}
 
 <style lang="scss">
-  .h-modal {
-    height: calc(100% - 2rem);
-  }
 </style>

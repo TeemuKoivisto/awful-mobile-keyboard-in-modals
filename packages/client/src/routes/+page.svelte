@@ -19,7 +19,7 @@
   </div>
 </header>
 
-<section class="my-12 gap-4 flex flex-col">
+<section class="mt-8 gap-4 flex flex-col">
   <div class="flex gap-2 items-end">
     <Flowbite />
     <MeltUi />
