@@ -36,7 +36,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <dialog
-  class="max-w-2xl w-full max-h-[580px] bg-white rounded-xl shadow-lg open:animate-fade-in open:backdrop:animate-fade-in backdrop:bg-black backdrop:bg-opacity-50"
+  class="relative max-w-2xl w-full max-h-[580px] bg-white rounded-xl shadow-lg open:animate-fade-in open:backdrop:animate-fade-in backdrop:bg-black backdrop:bg-opacity-50"
   bind:this={modalEl}
   transition:fade={{ duration: 400 }}
   on:click={click}

@@ -5,6 +5,7 @@
   import Native from '$modals/Native.svelte'
   import V1 from '$modals/V1.svelte'
   import V2 from '$modals/V2.svelte'
+  import V3 from '$modals/V3.svelte'
 </script>
 
 <header>
@@ -27,6 +28,7 @@
     <Native />
     <V1 />
     <V2 />
+    <V3 />
   </div>
   <div>
     <Scroller />
