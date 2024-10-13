@@ -1,9 +1,15 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements'
+  interface $$Props extends HTMLAttributes<HTMLDivElement> {}
 </script>
 
-<article class="w-full p-2 pb-4 p-4 md:p-5 space-y-4 flex-1 overflow-y-auto overscroll-contain">
+<article
+  {...$$restProps}
+  class={`${$$props.class || ''} w-full space-y-4 flex-1 overflow-y-auto overscroll-contain`}
+>
   <p>
-    this is a modal that should scale corresponding to the viewport as adjusted by virtual keyboard
+    This is very tall modal content that be scrollable and also adjust to the open mobile keyboard
+    when its input is focused.
   </p>
   <input />
   <p>

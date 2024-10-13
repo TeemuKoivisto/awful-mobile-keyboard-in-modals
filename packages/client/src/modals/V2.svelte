@@ -4,6 +4,7 @@
   import { fade, scale } from 'svelte/transition'
 
   import Content from '$components/Content.svelte'
+  import AfterContent from '$components/AfterContent.svelte'
 
   const MODAL_DURATION = 400
   let open = false
@@ -49,14 +50,10 @@
     />
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 bg-gray-100 mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
+      class="absolute top-4 bottom-0 mb-4 z-50 mx-auto overflow-y-auto md:max-w-3xl"
     >
-      <div class="flex relative max-w-2xl w-full max-h-full bg-white">
-        <div
-          bind:this={closeButtonEl}
-          tabindex="-1"
-          class="bg-white text-gray-500 rounded-lg shadow-md relative flex flex-col mx-auto w-full"
-        >
+      <div class="flex relative max-w-2xl w-full max-h-full bg-white rounded-xl shadow-lg">
+        <div bind:this={closeButtonEl} tabindex="-1" class="relative flex flex-col p-4 w-full">
           <div class="absolute top-2 right-2">
             <button
               class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
@@ -65,22 +62,9 @@
               <Icon icon={x} width={24} />
             </button>
           </div>
-          <h2 class="pl-5 p-4 mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
+          <h2 class="mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
           <Content />
-          <div
-            class="bg-white text-gray-500 border-gray-200 divide-gray-200 flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b-lg"
-          >
-            <button
-              type="button"
-              class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-within:ring-primary-300 dark:focus-within:ring-primary-800 rounded-lg"
-              >I accept</button
-            >
-            <button
-              type="button"
-              class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 dark:text-gray-400 hover:text-primary-700 focus-within:text-primary-700 dark:focus-within:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:bg-transparent dark:border-gray-600 dark:hover:border-gray-600 focus-within:ring-gray-200 dark:focus-within:ring-gray-700 rounded-lg"
-              >Decline</button
-            >
-          </div>
+          <AfterContent class="pt-4" />
         </div>
       </div>
     </div>

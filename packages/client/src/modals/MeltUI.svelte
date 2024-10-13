@@ -2,6 +2,7 @@
   import { createDialog, melt } from '@melt-ui/svelte'
 
   import Content from '$components/Content.svelte'
+  import AfterContent from '$components/AfterContent.svelte'
 
   const {
     elements: { trigger, portalled, overlay, content, title, description, close },
@@ -32,6 +33,7 @@
             Dialog description
           </p>
           <Content />
+          <AfterContent />
           <button
             class="inline-flex h-8 items-center justify-center rounded-sm bg-zinc-100 px-4 font-medium leading-none text-zinc-600"
             use:melt={$close}

@@ -2,6 +2,7 @@
   import { fade, scale } from 'svelte/transition'
 
   import Content from '$components/Content.svelte'
+  import AfterContent from '$components/AfterContent.svelte'
 
   const MODAL_DURATION = 400
   let open = false
@@ -90,105 +91,8 @@
                 ></button
               >
             </div>
-            <div
-              class="p-4 md:p-5 space-y-4 flex-1 overflow-y-auto overscroll-contain"
-              role="document"
-              tabindex="0"
-            >
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <input />
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy
-                laws for its citizens, companies around the world are updating their terms of
-                service agreements to comply.
-              </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect
-                on May 25 and is meant to ensure a common set of data rights in the European Union.
-                It requires organizations to notify users as soon as possible of high-risk data
-                breaches that could personally affect them.
-              </p>
-              <input />
-            </div>
-            <div
-              class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b-lg"
-            >
-              <button
-                type="button"
-                class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-within:ring-primary-300 dark:focus-within:ring-primary-800 rounded-lg"
-                >I accept</button
-              >
-              <button
-                type="button"
-                class="text-center font-medium focus-within:ring-4 focus-within:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 dark:text-gray-400 hover:text-primary-700 focus-within:text-primary-700 dark:focus-within:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:bg-transparent dark:border-gray-600 dark:hover:border-gray-600 focus-within:ring-gray-200 dark:focus-within:ring-gray-700 rounded-lg"
-                >Decline</button
-              >
-            </div>
+            <Content class="p-4" />
+            <AfterContent class="p-4" />
           </div>
         </div>
       </div>

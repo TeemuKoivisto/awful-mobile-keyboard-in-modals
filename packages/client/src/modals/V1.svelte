@@ -4,6 +4,7 @@
   import x from '@iconify-icons/feather/x'
 
   import Content from '$components/Content.svelte'
+  import AfterContent from '$components/AfterContent.svelte'
 
   const MODAL_DURATION = 400
   let open = false
@@ -49,7 +50,7 @@
     />
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 bg-gray-100 mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
+      class="absolute top-4 bottom-0 mb-4 z-50 bg-white mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
     >
       <div
         bind:this={closeButtonEl}
@@ -64,8 +65,9 @@
             <Icon icon={x} width={24} />
           </button>
         </div>
-        <h2 class="pl-1.5 mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
+        <h2 class="mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
         <Content />
+        <AfterContent />
       </div>
     </div>
   </div>

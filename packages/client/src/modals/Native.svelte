@@ -4,6 +4,7 @@
   import x from '@iconify-icons/feather/x'
 
   import Content from '$components/Content.svelte'
+  import AfterContent from '$components/AfterContent.svelte'
 
   let modalEl: HTMLDialogElement
   let open = false
@@ -35,8 +36,9 @@
       <Icon icon={x} width={24} />
     </button>
   </div>
-  <h2 class="pl-1.5 mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Native Modal</h2>
+  <h2 class="mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
   <Content />
+  <AfterContent />
 </dialog>
 
 <style lang="postcss">
