@@ -7,6 +7,7 @@
   import AfterContent from '$components/AfterContent.svelte'
 
   let modalEl: HTMLDialogElement
+  let contentEl: HTMLDivElement
   let open = false
 
   function handleClick() {
@@ -23,7 +24,7 @@
   }
   function click(e: MouseEvent & { currentTarget: EventTarget & HTMLDialogElement }) {
     // Close on clicks to backdrop
-    if (e.currentTarget === modalEl) {
+    if (!e.composedPath().includes(contentEl)) {
       close()
     }
   }
@@ -38,10 +39,9 @@
 <dialog
   class="relative max-w-2xl w-full max-h-[580px] bg-white rounded-xl shadow-lg open:animate-fade-in open:backdrop:animate-fade-in backdrop:bg-black backdrop:bg-opacity-50"
   bind:this={modalEl}
-  transition:fade={{ duration: 400 }}
   on:click={click}
 >
-  <div class="p-4">
+  <div class="p-4" transition:fade={{ duration: 400 }} bind:this={contentEl}>
     <h2
       class="my-2 text-4xl sm:text-5xl font-semibold text-black flex items-center justify-between"
     >

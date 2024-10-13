@@ -8,8 +8,7 @@
   class={`${$$props.class || ''} w-full space-y-4 flex-1 overflow-y-auto overscroll-contain`}
 >
   <p>
-    This is very tall modal content that be scrollable and also adjust to the open mobile keyboard
-    when its input is focused.
+    This content should be scrollable and also adjust to mobile keyboard when its input is focused.
   </p>
   <input />
   <p>

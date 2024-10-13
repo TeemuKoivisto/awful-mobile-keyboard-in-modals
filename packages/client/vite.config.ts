@@ -8,9 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       $components: resolve('./src/components'),
-      $config: resolve('./src/config'),
-      $modals: resolve('./src/modals'),
-      $stores: resolve('./src/stores')
+      $modals: resolve('./src/modals')
     }
   }
 })

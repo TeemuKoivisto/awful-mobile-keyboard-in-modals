@@ -39,9 +39,7 @@ export default {
     }),
     alias: {
       $components: 'src/components',
-      $config: 'src/config',
-      $modals: 'src/modals',
-      $stores: 'src/stores'
+      $modals: 'src/modals'
     }
   }
 }
