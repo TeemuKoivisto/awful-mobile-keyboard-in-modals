@@ -38,13 +38,13 @@
     href="https://flowbite-svelte.com/docs/components/modal#Scrolling_behaviour">Source</a
   >
   <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" on:click={openModal}>
-    Flowbite Clone
+    Flowbite
   </button>
 </div>
 
 {#if open}
   <div
-    class="fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center"
+    class="fixed top-0 start-0 end-0 h-full md:inset-0 md:h-full z-50 w-full flex justify-center items-center"
     aria-modal="true"
     role="dialog"
   >
@@ -59,7 +59,7 @@
       class="absolute top-4 bottom-0 mb-4 z-50 bg-gray-100 mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
     >
       <div
-        class="fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full p-4 flex justify-center items-center"
+        class="fixed top-0 start-0 end-0 h-full md:inset-0 md:h-full z-50 w-full p-4 flex justify-center items-center"
         tabindex="-1"
         aria-modal="true"
         role="dialog"

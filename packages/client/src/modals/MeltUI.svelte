@@ -26,9 +26,7 @@
       class="fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[90vw] max-w-[450px] -translate-x-1/2 -translate-y-1/2"
       use:melt={$content}
     >
-      <div
-        class="p-2 pt-4 flex relative w-screen sm:w-full max-w-2xl max-h-full bg-white sm:rounded-xl shadow-lg sm:p-4 sm:min-w-[512px]"
-      >
+      <div class="p-2 pt-4 flex relative bg-white sm:rounded-xl shadow-lg sm:p-4">
         <div class="flex flex-col">
           <div class="absolute top-2 right-2">
             <button

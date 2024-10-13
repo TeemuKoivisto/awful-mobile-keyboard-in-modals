@@ -28,7 +28,7 @@
 >
 
 <dialog
-  class="p-4 max-w-2xl w-full max-h-[calc(100%-2rem)] bg-white rounded-xl shadow-lg"
+  class="p-4 max-w-2xl w-full max-h-[580px] bg-white rounded-xl shadow-lg"
   bind:this={modalEl}
 >
   <div class="absolute top-2 right-2">

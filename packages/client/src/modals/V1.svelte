@@ -38,7 +38,7 @@
 
 {#if open}
   <div
-    class="fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center"
+    class="fixed top-0 start-0 end-0 h-full md:inset-0 z-50 w-full flex justify-center items-center"
     aria-modal="true"
     role="dialog"
   >
@@ -50,7 +50,7 @@
     />
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 bg-white mx-auto rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
+      class="absolute top-4 bottom-0 mb-4 z-50 bg-white mx-auto h-full max-h-[580px] rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
     >
       <div
         bind:this={closeButtonEl}

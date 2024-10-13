@@ -50,9 +50,11 @@
     />
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 mx-auto overflow-y-auto md:max-w-3xl"
+      class="absolute top-4 bottom-0 mb-4 z-50 mx-auto flex items-center overflow-y-auto md:max-w-3xl"
     >
-      <div class="flex relative max-w-2xl w-full max-h-full bg-white rounded-xl shadow-lg">
+      <div
+        class="flex relative max-w-2xl w-full h-full max-h-[580px] bg-white rounded-xl shadow-lg"
+      >
         <div bind:this={closeButtonEl} tabindex="-1" class="relative flex flex-col p-4 w-full">
           <div class="absolute top-2 right-2">
             <button
