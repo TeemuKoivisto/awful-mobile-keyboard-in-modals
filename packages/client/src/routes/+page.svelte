@@ -1,9 +1,10 @@
 <script lang="ts">
   import Scroller from '$components/Scroller.svelte'
+  import Flowbite from '$modals/Flowbite.svelte'
   import MeltUi from '$modals/MeltUI.svelte'
   import Native from '$modals/Native.svelte'
-
-  import { modalActions } from '$stores/modal'
+  import V1 from '$modals/V1.svelte'
+  import V2 from '$modals/V2.svelte'
 </script>
 
 <header>
@@ -15,21 +16,12 @@
 </header>
 
 <section class="px-4 flex flex-col">
-  <div class="px-4 mb-8 md:mb-10">
-    <button
-      class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300"
-      on:click={() => modalActions.open('v1', undefined)}>Modal v1</button
-    >
-    <button
-      class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300"
-      on:click={() => modalActions.open('flowbite', undefined)}>Flowbite</button
-    >
-    <button
-      class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300"
-      on:click={() => modalActions.open('v2', undefined)}>Modal v2</button
-    >
+  <div class="px-4 mb-8 md:mb-10 flex gap-2">
+    <Flowbite />
     <MeltUi />
     <Native />
+    <V1 />
+    <V2 />
   </div>
 </section>
 

@@ -1,6 +1,4 @@
 <script>
-  import Modal from '$modals/Modal.svelte'
-
   import '../app.pcss'
 </script>
 
@@ -11,4 +9,3 @@
     <slot />
   </main>
 </div>
-<Modal />

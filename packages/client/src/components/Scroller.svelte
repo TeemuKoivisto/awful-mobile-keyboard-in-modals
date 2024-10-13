@@ -3,7 +3,7 @@
   let scrollingModal = false
 </script>
 
-<Button on:click={() => (scrollingModal = true)} autoclose>Scrolling modal</Button>
+<Button on:click={() => (scrollingModal = true)} autoclose>Flowbite Example</Button>
 
 <Modal title="Terms of Service" bind:open={scrollingModal}>
   <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
