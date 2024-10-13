@@ -1,7 +1,8 @@
 <script lang="ts">
   import Scroller from '$components/Scroller.svelte'
   import Flowbite from '$modals/Flowbite.svelte'
-  import MeltUi from '$modals/MeltUI.svelte'
+  import MeltUI from '$modals/MeltUI.svelte'
+  import MeltUIV2 from '$modals/MeltUI-v2.svelte'
   import Native from '$modals/Native.svelte'
   import V1 from '$modals/V1.svelte'
   import V2 from '$modals/V2.svelte'
@@ -33,7 +34,8 @@
 <section class="mt-8 gap-4 flex flex-col">
   <div class="flex flex-wrap gap-2 items-end">
     <Flowbite />
-    <MeltUi />
+    <MeltUI />
+    <MeltUIV2 />
     <Native />
     <V1 />
     <V2 />
