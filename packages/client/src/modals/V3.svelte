@@ -56,9 +56,7 @@
         bind:this={contentEl}
       >
         <div class="relative flex flex-col">
-          <h2
-            class="mb-2 text-4xl font-semibold text-black flex items-center justify-between"
-          >
+          <h2 class="mb-2 text-4xl font-semibold text-black flex items-center justify-between">
             <span>Modal</span>
             <button
               class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"

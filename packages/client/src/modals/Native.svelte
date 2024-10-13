@@ -42,15 +42,17 @@
   on:click={click}
 >
   <div class="p-4">
-    <div class="absolute top-2 right-2">
+    <h2
+      class="my-2 text-4xl sm:text-5xl font-semibold text-black flex items-center justify-between"
+    >
+      <span> Modal </span>
       <button
         class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
         on:click={close}
       >
         <Icon icon={x} width={24} />
       </button>
-    </div>
-    <h2 class="mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
+    </h2>
     <Content />
     <AfterContent />
   </div>

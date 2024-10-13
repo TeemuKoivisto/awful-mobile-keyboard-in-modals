@@ -42,18 +42,20 @@
     />
     <div
       transition:scale={{ duration: MODAL_DURATION }}
-      class="absolute top-4 bottom-0 mb-4 z-50 bg-white mx-auto h-full max-h-[580px] rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
+      class="z-50 bg-white mx-auto h-full max-h-[580px] rounded-xl shadow-lg overflow-y-auto max-w-2xl"
     >
-      <div class="p-4 flex flex-col relative focus:outline-none">
-        <div class="absolute top-2 right-2">
+      <div class="p-4 flex flex-col">
+        <h2
+          class="my-2 text-4xl sm:text-5xl font-semibold text-black flex items-center justify-between"
+        >
+          <span> Modal </span>
           <button
             class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
             on:click={close}
           >
             <Icon icon={x} width={24} />
           </button>
-        </div>
-        <h2 class="mt-4 mb-2 text-4xl sm:text-5xl font-semibold text-black">Modal</h2>
+        </h2>
         <Content />
         <AfterContent />
       </div>
