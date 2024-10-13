@@ -8,8 +8,6 @@
 
   const MODAL_DURATION = 400
   let open = false
-  let originalFocusedEl: HTMLElement
-  let closeButtonEl: HTMLElement
 
   function handleKeyDown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
@@ -18,16 +16,10 @@
   }
   function openModal() {
     open = true
-    if (document.activeElement instanceof HTMLElement) {
-      originalFocusedEl = document.activeElement
-    }
-    closeButtonEl.focus()
-    // Lock scrolling of viewport behind the modal
     document.querySelector('html')?.classList.add('scroll-lock')
   }
   function close() {
     open = false
-    originalFocusedEl.focus()
     document.querySelector('html')?.classList.remove('scroll-lock')
   }
 </script>
@@ -52,11 +44,7 @@
       transition:scale={{ duration: MODAL_DURATION }}
       class="absolute top-4 bottom-0 mb-4 z-50 bg-white mx-auto h-full max-h-[580px] rounded-xl shadow-lg overflow-y-auto md:max-w-3xl"
     >
-      <div
-        bind:this={closeButtonEl}
-        tabindex="-1"
-        class="p-4 flex flex-col relative focus:outline-none"
-      >
+      <div class="p-4 flex flex-col relative focus:outline-none">
         <div class="absolute top-2 right-2">
           <button
             class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"

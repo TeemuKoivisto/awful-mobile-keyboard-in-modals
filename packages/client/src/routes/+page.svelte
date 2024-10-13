@@ -10,11 +10,12 @@
 <header>
   <h1 class="mt-12 mb-4 md:mt-16 text-4xl font-bold">Modals are hard</h1>
   <div class="pl-2 text-base">
-    <p>For an acceptable modal, it has to:</p>
+    <p>An optimal modal should:</p>
     <ol class="pl-8 list-decimal">
       <li>Fit the viewport without scrolling the modal itself, only content</li>
-      <li>To adjust dynamically in mobile when keyboard is open, without hiding content</li>
-      <li>To have clickable overlay background that closes the modal, not an event listener</li>
+      <li>Adjust height dynamically in mobile when keyboard is open, without overflowing</li>
+      <li>Have clickable overlay background that closes the modal, not a global event listener</li>
+      <li>Have overlay work on the empty space above & under modal as well</li>
     </ol>
   </div>
 </header>

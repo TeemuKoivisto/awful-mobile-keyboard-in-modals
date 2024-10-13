@@ -6,8 +6,6 @@
 
   const MODAL_DURATION = 400
   let open = false
-  let originalFocusedEl: HTMLElement
-  let closeButtonEl: HTMLElement
 
   function handleKeyDown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
@@ -16,16 +14,10 @@
   }
   function openModal() {
     open = true
-    if (document.activeElement instanceof HTMLElement) {
-      originalFocusedEl = document.activeElement
-    }
-    closeButtonEl.focus()
-    // Lock scrolling of viewport behind the modal
     document.querySelector('html')?.classList.add('scroll-lock')
   }
   function close() {
     open = false
-    originalFocusedEl.focus()
     document.querySelector('html')?.classList.remove('scroll-lock')
   }
 </script>
