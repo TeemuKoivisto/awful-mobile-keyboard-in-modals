@@ -27,7 +27,10 @@
   >Dialog</button
 >
 
-<dialog bind:this={modalEl}>
+<dialog
+  class="p-4 max-w-2xl w-full max-h-[calc(100%-2rem)] bg-white rounded-xl shadow-lg"
+  bind:this={modalEl}
+>
   <div class="absolute top-2 right-2">
     <button
       class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
@@ -41,14 +44,4 @@
   <AfterContent />
 </dialog>
 
-<style lang="postcss">
-  dialog {
-    margin: 10% auto;
-    width: 80%;
-    max-width: 350px;
-    background-color: #fff;
-    padding: 34px;
-    border: 0;
-    border-radius: 5px;
-  }
-</style>
+<style lang="postcss"></style>

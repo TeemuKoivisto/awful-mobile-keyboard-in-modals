@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte/dist/OfflineIcon.svelte'
+  import x from '@iconify-icons/feather/x'
   import { createDialog, melt } from '@melt-ui/svelte'
 
   import Content from '$components/Content.svelte'
@@ -28,18 +30,20 @@
         class="p-2 pt-4 flex relative w-screen sm:w-full max-w-2xl max-h-full bg-white sm:rounded-xl shadow-lg sm:p-4 sm:min-w-[512px]"
       >
         <div class="flex flex-col">
-          <h2 class="m-0 text-lg font-medium text-black" use:melt={$title}>Dialog Title</h2>
+          <div class="absolute top-2 right-2">
+            <button
+              class="flex items-center text-sm rounded-full px-2 py-2 hover:bg-gray-200"
+              use:melt={$close}
+            >
+              <Icon icon={x} width={24} />
+            </button>
+          </div>
+          <h2 class="m-0 text-lg font-medium text-black" use:melt={$title}>Modal</h2>
           <p class="mb-5 mt-2 leading-normal text-zinc-600" use:melt={$description}>
             Dialog description
           </p>
           <Content />
           <AfterContent />
-          <button
-            class="inline-flex h-8 items-center justify-center rounded-sm bg-zinc-100 px-4 font-medium leading-none text-zinc-600"
-            use:melt={$close}
-          >
-            Close Dialog
-          </button>
         </div>
       </div>
     </div>
