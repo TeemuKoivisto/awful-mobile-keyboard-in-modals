@@ -1,17 +1,20 @@
 <script lang="ts">
   import { createDialog, melt } from '@melt-ui/svelte'
 
+  import Content from '$components/Content.svelte'
+
   const {
     elements: { trigger, portalled, overlay, content, title, description, close },
     states: { open }
   } = createDialog()
-
-  const values = Array.from(new Array(200)).map((_, idx) => idx)
 </script>
 
-<button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" use:melt={$trigger}>
-  MeltUI
-</button>
+<div class="flex flex-col">
+  <a class="hover:underline" href="https://melt-ui.com/docs/builders/dialog">Source</a>
+  <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" use:melt={$trigger}>
+    MeltUI
+  </button>
+</div>
 
 {#if $open}
   <div use:melt={$portalled}>
@@ -28,14 +31,9 @@
           <p class="mb-5 mt-2 leading-normal text-zinc-600" use:melt={$description}>
             Dialog description
           </p>
-          <ul class="flex flex-col overflow-y-scroll">
-            {#each values as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
+          <Content />
           <button
-            class="inline-flex h-8 items-center justify-center rounded-sm
-        bg-zinc-100 px-4 font-medium leading-none text-zinc-600"
+            class="inline-flex h-8 items-center justify-center rounded-sm bg-zinc-100 px-4 font-medium leading-none text-zinc-600"
             use:melt={$close}
           >
             Close Dialog

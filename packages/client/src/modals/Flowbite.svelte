@@ -31,9 +31,15 @@
 
 <svelte:window on:keydown={handleKeyDown} />
 
-<button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" on:click={openModal}>
-  Flowbite Clone
-</button>
+<div class="flex flex-col">
+  <a
+    class="hover:underline"
+    href="https://flowbite-svelte.com/docs/components/modal#Scrolling_behaviour">Source</a
+  >
+  <button class="rounded px-4 py-1 bg-gray-200 hover:bg-gray-300" on:click={openModal}>
+    Flowbite Clone
+  </button>
+</div>
 
 {#if open}
   <div

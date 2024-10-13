@@ -16,7 +16,7 @@
 </header>
 
 <section class="px-4 flex flex-col">
-  <div class="px-4 mb-8 md:mb-10 flex gap-2">
+  <div class="px-4 mb-8 md:mb-10 flex gap-2 items-end">
     <Flowbite />
     <MeltUi />
     <Native />

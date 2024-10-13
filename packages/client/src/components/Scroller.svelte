@@ -1,11 +1,12 @@
 <script lang="ts">
   import { Button, Modal } from 'flowbite-svelte'
   let scrollingModal = false
+  // From https://flowbite-svelte.com/docs/components/modal#Scrolling_behaviour
 </script>
 
 <Button on:click={() => (scrollingModal = true)} autoclose>Flowbite Example</Button>
 
-<Modal title="Terms of Service" bind:open={scrollingModal}>
+<Modal title="Terms of Service" outsideclose={true} bind:open={scrollingModal}>
   <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
     With less than a month to go before the European Union enacts new consumer privacy laws for its
     citizens, companies around the world are updating their terms of service agreements to comply.
