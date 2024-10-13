@@ -8,24 +8,29 @@
 </script>
 
 <header>
-  <h1
-    class="mt-12 px-2 mb-4 md:mt-16 font-cursive text-4xl md:text-7xl tracking-tight flex items-center justify-between"
-  >
-    svelte
-  </h1>
+  <h1 class="mt-12 mb-4 md:mt-16 text-4xl font-bold">Modals are hard</h1>
+  <div class="pl-2 text-base">
+    <p>For an acceptable modal, it has to:</p>
+    <ol class="pl-8 list-decimal">
+      <li>Fit the viewport without scrolling the modal itself, only content</li>
+      <li>To adjust dynamically in mobile when keyboard is open, without hiding content</li>
+      <li>To have clickable overlay background that closes the modal, not an event listener</li>
+    </ol>
+  </div>
 </header>
 
-<section class="px-4 flex flex-col">
-  <div class="px-4 mb-8 md:mb-10 flex gap-2 items-end">
+<section class="my-12 gap-4 flex flex-col">
+  <div class="flex gap-2 items-end">
     <Flowbite />
     <MeltUi />
     <Native />
     <V1 />
     <V2 />
   </div>
+  <div>
+    <Scroller />
+  </div>
 </section>
-
-<Scroller />
 
 <style lang="postcss">
 </style>
