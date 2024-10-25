@@ -37,7 +37,7 @@
           class="p-2 pt-4 flex relative w-screen sm:w-full max-w-2xl h-full max-h-[580px] bg-white sm:rounded-xl shadow-lg sm:p-4 sm:min-w-[512px]"
           use:melt={$content}
         >
-          <div class="relative flex flex-col">
+          <div class="relative flex flex-col w-full">
             <h2 class="mb-2 text-4xl font-semibold text-black flex items-center justify-between">
               <span use:melt={$title}>Modal</span>
               <button
